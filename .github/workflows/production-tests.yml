@@ -51,27 +51,17 @@ jobs:
           distribution: temurin
           java-version: "21"
 
+      # Single self-contained index.html: download the artifact, unzip and open it in a browser (no Allure CLI needed).
       - name: Generate Allure HTML report
         if: always()
         run: |
           npm install -g allure-commandline
-          allure generate allure-results -o allure-report --clean
+          allure generate allure-results -o allure-report --clean --single-file
 
       - name: Upload Allure report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: allure-report
+          path: allure-report/index.html
           retention-days: 14
-
-      - name: Upload raw Allure results and failure traces
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results-and-traces
-          path: |
-            allure-results
-            test-results
-          retention-days: 14
-          if-no-files-found: ignore
