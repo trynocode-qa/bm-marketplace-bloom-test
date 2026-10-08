@@ -1,0 +1,8 @@
+playwright>=1.47
+pytest>=8.3
+pytest-playwright>=0.5
+allure-pytest>=2.13
+PyYAML>=6.0
+pytest-xdist>=3.6
+pytest-rerunfailures>=14.0
+tzdata>=2024.1
