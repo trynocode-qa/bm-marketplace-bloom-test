@@ -37,7 +37,7 @@ select_framework = {
 # Expected values on the Summary page (Summary labels differ from the form question text).
 # They match the answers given by fill_project_stakeholder() and fill_procurement_route().
 project_stakeholders_summary = {
-    'Owner Name':'Sawan - Project Owner Test',
+    'Requirement Owner Name':'Sawan - Project Owner Test',   # label was 'Owner Name' before the 08-10-2026 app update
     'Additional Stakeholders':['Sawan - Additional Stakeholder 01 Test (sawan.hukm+ash01@bloom.services)'],
     'Project Approval Required':'Yes',
     'Project Pre Approval':'No',
